@@ -1,9 +1,41 @@
 import React from "react";
 
+import assets from "../assets";
+import styles from "../styles/Global";
+
 const Download=()=>{
     return(
-        <div>
-            Download
+        <div className={`${styles.section} ${styles.bgWhite}`}>
+            <div className={`${styles.subSection} flex-col flex-center`}>
+                <div>
+                    <h1 className={`${styles.h1Text} ${styles.blackText}`}>
+                        Download the Source Code
+                    </h1>
+                    <p className={`${styles.pText} ${styles.blackText}`}> Get the full source code from Github</p>
+                </div>
+                <div className="flex items-center ">
+                    <button className={`mr-4 ${styles.btnPrimary}`}
+                        onClick={()=>window.open("https://github.com/ilidiocn/NFT", "_blank")}
+                    >
+                        NFT App Source Code
+                    </button>
+
+                    <button className={`ml-4 ${styles.btnPrimary}`}
+                        onClick={()=>window.open("https://github.com/ilidiocn/Showcase", "_blank")}
+                    >
+                        Showcase Source Code
+                    </button>
+                </div>
+                <div className={styles.flexCenter}>
+                    <img
+                        src={assets.scene}
+                        alt="download_png"
+                        className={styles.fullImg}
+                    />
+                
+                </div>
+            </div>
+            
         </div>
     )
 }
